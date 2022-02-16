@@ -1,0 +1,21 @@
+More simple code:
+
+function countSheep(num) {
+  let result = "";
+
+  for (let i = 1; i <= num; i++) {
+    result += `${i} sheep...`;
+  }
+
+  return result;
+
+/////////////////////
+More efficient code:
+
+function countSheep(num) {
+  return (
+    [...Array(num)]
+      .map((x, i) => `${i + 1} sheep...`)
+      .join('')
+  )
+}
