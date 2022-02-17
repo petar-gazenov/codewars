@@ -1,0 +1,16 @@
+More Efficient (Voted most clever on Codewars:
+const drawStairs = n => [...Array(n)].map((_, i) => " ".repeat(i) + "I").join("\n");
+
+
+More Complex:
+function drawStairs(n) {
+  if (n > 1){ 
+    let str = ''
+    for (let i = 1; i <n; i++){
+      str +=`I\n${' '.repeat(i)}`
+    }
+    return str + 'I';
+  } else {
+    return 'I';
+  }
+}
