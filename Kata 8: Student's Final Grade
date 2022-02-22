@@ -1,0 +1,9 @@
+// The standard function was replaced by an Arrow function
+const finalGrade = (exam, projects) => {
+// Then using the outline in the Kata, it can be summed up as below
+  if (exam > 90 || projects > 10) return 100;
+  if (exam > 75 && projects >= 5) return 90;
+  if (exam > 50 && projects >= 2) return 75;
+  // in case none of the reqs were met, then it defaults to
+  return 0;
+}
