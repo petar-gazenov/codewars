@@ -1,0 +1,2 @@
+const multipleOfArray = array => 
+  array.filter((a,b) => a % b === 0);
