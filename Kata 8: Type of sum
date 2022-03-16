@@ -1,0 +1,10 @@
+function typeOfSum(a, b) {
+  if (typeof a === 'string' || typeof b === 'string'){
+    return 'string'
+  } else {
+    return 'number'
+  }
+}
+
+Most clever: 
+const typeOfSum = (a, b) => typeof(a + b);
