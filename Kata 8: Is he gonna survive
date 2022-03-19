@@ -1,0 +1,6 @@
+const hero = (bullets, dragons) => (bullets /2) >= dragons ? true : false;
+
+Most clever: 
+function hero(bullets, dragons){
+  return bullets >= dragons * 2
+}
