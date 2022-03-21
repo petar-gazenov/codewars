@@ -1,0 +1,12 @@
+function oddOrEven(n) {
+  if((n /2) % 2 == 1) {
+    return 'Odd'
+  } else if ((n / 2) % 2 == 0) {
+    return 'Even'
+  } else {
+    return 'Either'
+  }
+}
+
+Most clever: 
+const oddOrEven = $ => $ % 2 ? EITHER : $ / 2 % 2 ? ODD : EVEN
