@@ -1,0 +1,22 @@
+function grid(N) {
+  if (N<0)
+    return null;
+  
+  const ans = [], alphabet='abcdefghijklmnopqrstuvwxyz';
+  
+  for (let i = 0; i < N; i++) {
+    const row = [];
+    for (let j = i; j < N+i; j++) {
+      row.push(alphabet[j%26]);
+    }
+    ans.push(row.join(' '));
+  }
+  
+  return ans.join('\n');
+}
+
+Most Clever: 
+function grid($){
+  const abc = 'abcdefghijklmnopqrstuvwxyz'.repeat(8)
+  return $ < 0 ? null : Array.from({length:$}, (_,i)=> [...abc.substr(i, $)].join(' ')).join('\n')
+}
