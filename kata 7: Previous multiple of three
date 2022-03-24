@@ -1,0 +1,27 @@
+const prevMultOfThree = n => {
+  //Splits each element in the arrary since it's a string
+  let arr = n.toString().split('')
+  // Checks over each element making sure not to exceed the length
+  for (let i = 0; i < arr.length; i++) {
+    // Checks each to see against the loop below
+    for (let x = 0; x < arr.length; i++) {
+      //Rejoins the lets as a number not a string
+      let sum = +arr.join('')
+      //Checks to see if it's a multiple of 3 otherwise it's removed
+      if (sum % 3 === 0) { 
+        return sum
+      } else {
+      arr.pop()
+        }
+    }
+    return null
+  }
+}
+
+Most Clever: 
+
+const prevMultOfThree = n => {
+  if (n === 0) return null;
+  if (n%3 === 0) return n;
+  return prevMultOfThree(+n.toString().slice(0, -1))
+}
