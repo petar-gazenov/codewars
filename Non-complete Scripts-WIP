@@ -1,0 +1,12 @@
+function handler(key, isCaps = false, isShift = false) {
+  if (isNaN(key) == true && isCaps == false && isShift == false 
+      || isNaN(key) == true && isCaps == true && isShift == true ) {
+    return key.toLowerCase();
+  } else if (key == '1' && isCaps == true && isShift == true 
+      || key == '1' && isCaps == false && isShift == true) {
+    return '!';
+  } else if (isNaN(key) == true && isCaps == true && isShift == false 
+      || isNaN(key) == true && isCaps == false && isShift == true) {
+    return key.toUpperCase();
+  }
+}
