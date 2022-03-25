@@ -1,0 +1,13 @@
+function lastSurvivor(letters, coords) {
+//Splits the connected strings into individual elements
+  const spLetters = letters.split('');
+  // Will continue the loop until it is zero elements in coords
+  while (coords.length > 0) {
+  // creates a place to store all the remaining coords after they have been shifted
+    let poppedCoords = coords.shift()
+    spLetters.splice(poppedCoords, 1)
+  }
+  return spLetters[0];
+}
+Most clever:
+function lastSurvivor(letters,coords) { return coords.reduce( (letters,coord) => letters.slice(0,coord) + letters.slice(coord+1) , letters ); }
