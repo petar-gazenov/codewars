@@ -1,0 +1,27 @@
+Not my solution below:
+
+const symb = { "`":"~", "1":"!", "2":"@", "3":"#", "4":"$", "5":"%", "6":"^", "7":"&", "8":"*", "9":"(", 
+              "0":")", "-":"_","=":"+","[":"{","]":"}",";":":","'":'"',",":"<",".":">","/":"?",'\\':"|"}
+
+function handler(key, isCaps = false, isShift = false) {
+  if(typeof key !== "string" || key.toUpperCase() == key && key.match(/[A-Z]/g) || key.length != 1){
+    return "KeyError"
+  }
+    
+  
+  if(key.match(/[a-z]/g)) {
+    if ( isCaps != isShift ) return key.toUpperCase()
+  } else {
+    if ( isShift ) return symb[key]
+  } 
+  
+  return key
+}
+
+Most Clever: 
+const handler = (key, isCaps, isShift) =>{
+  const unNum = [..."~!@#$%^&*()_+{}|:\"<>? "];
+  const num = [..."`1234567890-=[]\\;',./ "];
+  
+  return /^[a-z]$/.test(key) ? isShift ^ isCaps ? key.toUpperCase() : key : num.includes(key) ? isShift ? unNum[num.indexOf(key)] : key : 'KeyError';
+}
