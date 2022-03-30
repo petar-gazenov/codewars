@@ -1,1 +1,14 @@
-
+function i(word) {
+  let b = '';
+  let iWord = word.toLowerCase();
+  if (word === '' || iWord[0] === 'i') {
+  return 'Invalid word';
+  } else {
+  let count = iWord.match(/[aeiou]/gi).length;
+    if ((count - word.length) >= word.length) {
+      return 'Invalid word';
+      } else {
+      return b + word;
+      }
+      }
+}
