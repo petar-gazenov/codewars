@@ -1,14 +1,19 @@
 function i(word) {
-  let b = '';
+  let b = 'i';
   let iWord = word.toLowerCase();
-  if (word === '' || iWord[0] === 'i') {
+  
+  if (word === '' || iWord[0] === b) {
   return 'Invalid word';
   } else {
-  let count = iWord.match(/[aeiou]/gi).length;
-    if ((count - word.length) >= word.length) {
+  let fullVowel = b + word;
+  let vCount = fullVowel.match(/[aeiou]/gi).length;
+  let cCount = fullVowel.match(/[bcdfghjklmnpqrstwxz]/gi).length;
+    if ((vCount - word.length) > (cCount - word.length)) {
       return 'Invalid word';
       } else {
-      return b + word;
+      return fullVowel;
       }
       }
 }
+
+
