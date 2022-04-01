@@ -11,7 +11,7 @@ function i(word) {
     if ((vCount - word.length) > (cCount - word.length)) {
       return 'Invalid word';
       } else {
-      return fullVowel;
+      return fullVoel;
       }
       }
 }
