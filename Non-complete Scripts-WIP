@@ -2,18 +2,16 @@ function i(word) {
   let b = 'i';
   let iWord = word.toLowerCase();
   
-  if (word === '' || iWord[0] === b) {
+  if (word === '' || iWord[0] === b || word[0] === iWord[0]) {
   return 'Invalid word';
   } else {
   let fullVowel = b + word;
   let vCount = fullVowel.match(/[aeiou]/gi).length;
-  let cCount = fullVowel.match(/[bcdfghjklmnpqrstwxz]/gi).length;
-    if ((vCount - word.length) > (cCount - word.length)) {
+  let cCount = fullVowel.match(/[bcdfghjklmnpqrstwxyz]/gi).length;
+    if (vCount > cCount) {
       return 'Invalid word';
       } else {
       return fullVowel;
       }
       }
 }
-
-
