@@ -1,1 +1,8 @@
-
+class Song {
+  title;
+  artist;
+  constructor(title, artist) {
+    this.title = title;
+    this.artist = artist;
+  }
+}
